@@ -1,0 +1,205 @@
+# This is a basic workflow to help you get started with Actions
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foxtail IT Solutions | Systems Intelligence Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0a0c;
+            --accent-blue: #3b82f6;
+            --accent-orange: #f97316;
+            --surface: #18181b;
+            --text-main: #f4f4f5;
+            --text-dim: #a1a1aa;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            padding: 2rem;
+            border-bottom: 1px solid #27272a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -1px;
+            color: var(--accent-orange);
+        }
+
+        .hero {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: radial-gradient(circle at center, #1e1b4b 0%, var(--bg-dark) 70%);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent-blue);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #27272a;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-blue);
+        }
+
+        .card h3 {
+            color: var(--accent-blue);
+            margin-top: 0;
+        }
+
+        .hub-section {
+            background: #111827;
+            padding: 4rem 2rem;
+            border-top: 1px solid var(--accent-blue);
+            text-align: center;
+        }
+
+        .google-tv-promo {
+            background: linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+        footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            border-top: 1px solid #27272a;
+        }
+
+        .cta-button {
+            background: var(--accent-blue);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">FOXTAIL IT SOLUTIONS</div>
+    <div class="mono">UTAH CENTRAL HUB // LOGIC-DRIVEN</div>
+</header>
+
+<section class="hero">
+    <div class="mono">Tier-3 Architectural Support</div>
+    <h1>High-Performance Recovery & <br>Hardware Logic</h1>
+    <p style="max-width: 700px; margin: 0 auto; color: var(--text-dim);">
+        We bridge the gap between abstract software and physical infrastructure. Foxtail IT provides specialized hardware intervention for Utah’s elite IT degree-holders.
+    </p>
+    <a href="#" class="cta-button">INITIALIZE DIAGNOSTIC</a>
+</section>
+
+<section class="services-grid">
+    <div class="card">
+        <h3>Software Engineers</h3>
+        <p>Kernel-level troubleshooting and VRAM optimization. We ensure your local environment handles heavy compilation without thermal throttling.</p>
+    </div>
+    <div class="card">
+        <h3>Systems Architects</h3>
+        <p>RAID recovery, localized server-blade maintenance, and NVMe optimization for zero-latency data throughput.</p>
+    </div>
+    <div class="card">
+        <h3>Cybersecurity Ops</h3>
+        <p>Hardware-level firmware audits and secure-boot restoration. We harden the physical layer of your operations.</p>
+    </div>
+</section>
+
+<section class="hub-section">
+    <div class="mono">The Future of Utah Intelligence</div>
+    <h2 class="google-tv-promo">Google TV + AI Integration</h2>
+    <p style="max-width: 800px; margin: 2rem auto;">
+        We are pioneering the introduction of the Google TV platform as a professional and entertainment outcome hub. 
+        Utilizing Gemini-driven logic, we sync your hardware with a central intelligence network—modeled on the efficiency of a state-level AI government body.
+    </p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Foxtail IT Solutions | Powered by Gemini Logic | Salt Lake City, Utah</p>
+</footer>
+
+</body>
+</html>
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
